@@ -32,9 +32,8 @@ async def post_new_recipe(session: AsyncSession, data: RecipeIn):
     await session.flush()
 
     for ingredient in data.ingredients:
-        if not hasattr(ingredient, 'recipe_id'):
+        if not hasattr(ingredient, "recipe_id"):
             ingredient.recipe_id = recipe.idx  #  type: ignore
-
 
         writable_ingredients.append(
             RecipesIngredients(**ingredient.model_dump())
