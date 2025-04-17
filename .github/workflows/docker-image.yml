@@ -11,6 +11,7 @@ jobs:
   pytest:
     runs-on: ubuntu-latest
     steps:
+
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -28,6 +29,9 @@ jobs:
           pip install -r requirements.test.txt
 
       - name: Run pytest
+        env:
+          DATABASE_PATH: ${{vars.DATABASE_PATH}}
+          DATABASE_DRIVER: ${{vars.DATABASE_DRIVER}}
         run: pytest tests/
 
 
