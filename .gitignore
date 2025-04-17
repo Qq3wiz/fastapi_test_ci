@@ -1,0 +1,30 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Databases
+*.db
+*.sqlite3
+
+# Pytest stuff
+.pytest_cache/
+.coverage
+
+# Ruff cache
+.ruff_cache/
+
+# Mypy cache
+.mypy_cache/
+
+# VSCode settings
+.vscode/
+
+# ENV files
+*.env
