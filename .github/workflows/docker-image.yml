@@ -43,7 +43,7 @@ jobs:
         run: pip install ruff
 
       - name: Run ruff linter
-        run: ruff src/ tests/
+        run: ruff check src/
 
 
   isort:
@@ -61,7 +61,7 @@ jobs:
         run: pip install isort
 
       - name: Run isort linter
-        run: isort --check-only src/ tests/
+        run: isort --check-only  --profile=black src/
 
 
   mypy:

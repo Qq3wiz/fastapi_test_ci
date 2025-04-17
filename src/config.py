@@ -1,6 +1,6 @@
 import os
-from pathlib import Path
 import sys
+from pathlib import Path
 
 from dotenv import load_dotenv
 from sqlalchemy import URL
@@ -14,11 +14,10 @@ class Config:
 
     def __init__(self):
         if not any([self.DATABASE_DRIVER, self.DATABASE_PATH]):
-            print('ENV FILE NOT SET. EXITING. . .')
+            print("ENV FILE NOT SET. EXITING. . .")
             sys.exit(1)
         self.DATABASE_URL = URL.create(
-            drivername=self.DATABASE_DRIVER,
-            database=self.DATABASE_PATH
+            drivername=self.DATABASE_DRIVER, database=self.DATABASE_PATH
         )
 
 

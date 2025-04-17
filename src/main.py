@@ -7,7 +7,13 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from typing_extensions import Annotated
 
 from src.database import Base, engine, get_session
-from src.models import RecipeAdd, RecipeDelete, RecipeErrorBase, RecipeIn, SingleRecipe
+from src.models import (
+    RecipeAdd,
+    RecipeDelete,
+    RecipeErrorBase,
+    RecipeIn,
+    SingleRecipe,
+)
 from src.queries import (
     delete_recipe_by_id,
     get_recipe_with_id,
